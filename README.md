@@ -2,6 +2,50 @@
 An advanced google dorking guide for locally in the US and internationally
 #Disclaimer
 This should not be misused to expose sensitive information and is at your own risk legally if it is not publically accessible information
+# Summary of different portions of the repo
+    Dork_Shodan/Shodan_IOT_OT.md: A comprehensive guide to Shodan dorks specifically tailored for IoT and OT devices, including various filters and examples for searching devices by location, organization, device type, operating system, and more.
+    IOT_and_OT/Shodan_IOT_OT.md: Similar content focused on Shodan dorks for IoT and OT, providing a structured approach to querying devices and services.
+    orginizations/ : a folder that outlines different types of orginizations
+How to Use This Guide
+
+    Clone the Repository: Use the command git clone <repository-url> to clone the repository to your local machine.
+    Explore the Folders: Navigate through the folders to find specific dorks, organizations, and compliance information.
+    Refer to the README: The README file provides an overview and guidelines for using the repository effectively.
+
+Dorking Techniques
+
+Google dorking involves using advanced search operators to find specific information on the internet. Here are some common techniques:
+
+    Basic Search Operators: Use quotes for exact matches, site: to limit searches to specific domains, and filetype: to find specific file types.
+    Combining Operators: Combine multiple operators to refine your search results. For example, site:example.com filetype:pdf "confidential".
+
+Shodan Dorks
+
+Shodan is a search engine for internet-connected devices. The Dork_Shodan folder contains various Shodan dorks that can be used to find exposed devices and services. Here are some examples:
+Basic Shodan Filters
+
+    City: city:"Bangalore"
+    Country: country:"IN"
+    Geo: geo:"56.913055,118.250862"
+    Hostname: hostname:"example.com"
+    Organization: org:"Microsoft"
+    Operating System: os:"Windows 7"
+    Device Type: device:webcam
+
+Refer to the Dork_Shodan/Shodan_IOT_OT.md file for a comprehensive list of Shodan dorks and their usage.
+IoT and OT Organizations
+
+The orginizations folder contains markdown files that list various organizations involved in IoT and OT. Each file provides details about the organization, including its description, sectors, and countries of operation.
+Example Organizations:
+
+    Industrial Internet Consortium (IIC)
+        Focuses on advancing the Industrial Internet of Things (IIoT) through collaboration and standardization.
+    National Institute of Standards and Technology (NIST)
+        A federal agency focused on advancing measurement science, standards, and technology.
+    Canadian Standards Association (CSA)
+        A standards organization focused on developing standards for a wide range of industries.
+
+Refer to the orginizations/IOT_and_OT_orgs.md file for a complete list of organizations.
 
 # Important Legal disclaimer relating to this dorking guide
 **Important Legal Notice:**
