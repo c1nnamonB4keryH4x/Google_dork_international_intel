@@ -265,3 +265,166 @@ regex:".*(admin|root).*(1234|admin|password).*"
 regex:"password.*admin"
 regex:"^.*user.*login.*$"
 ```
+# 🛡️ Advanced Shodan Dork Applications for Global IoT/OT Organizations & Sectors
+
+This enhanced document aligns Shodan dork intelligence with real-world **industrial, cyber-physical, and smart infrastructure ecosystems**. These dorks are designed to trace exposed IIoT/OT technologies by geography, industry, organization, and protocol fingerprinting.
+
+---
+
+## 🌐 Global OT Standards & Consortiums
+
+### Industrial Internet Consortium (IIC)
+```sh
+org:"Industrial Internet Consortium" OR "IIC" (port:102 OR port:502 OR port:2404) title:"industrial" country:US,DE,CN
+```
+
+### Industrial IoT (IIoT) Forum
+```sh
+("IIoT" OR title:"Industrial Internet of Things") (port:44818 OR port:47808) http.title:"gateway"
+```
+
+### International Society of Automation (ISA)
+```sh
+org:"International Society of Automation" port:502 OR port:1911 title:"automation" "PLC"
+```
+
+### IEC-Compliant SCADA Devices
+```sh
+port:2404 "IEC 60870-5-104" "asdu address" -authentication country:US,DE,CN
+```
+
+### IEEE-Controlled Testbeds & Infrastructures
+```sh
+ssl.cert.subject.cn:"ieee.org" port:443 "testbed" OR "telemetry"
+```
+
+---
+
+## 🇺🇸 North America
+
+### NIST (Smart Grid + OT Security)
+```sh
+org:"NIST" (port:2404 OR port:47808 OR port:443) title:"SCADA" OR "smart grid"
+```
+
+### Department of Energy (DOE) / Grid Ops
+```sh
+org:"Department of Energy" "modbus" OR "ethernet/ip" port:502 OR port:44818
+```
+
+### NREL (Renewables Infrastructure)
+```sh
+hostname:nrel.gov (port:443 OR port:47808) title:"solar" OR "battery management"
+```
+
+### ASME (Industrial Engineering Networks)
+```sh
+org:"ASME" port:502 title:"process control" OR "CNC"
+```
+
+---
+
+## 🇨🇦 Canada
+
+### CSA (Smart Metering + Automation)
+```sh
+org:"CSA Group" (port:47808 OR port:9600) title:"automation controller"
+```
+
+### NRCan (Energy Research Endpoints)
+```sh
+hostname:nrcan.gc.ca port:443 "wind turbine" OR "solar node"
+```
+
+---
+
+## 🇪🇺 Europe (Advanced Industrial Networks)
+
+### Fraunhofer (Digital Factory Interfaces)
+```sh
+org:"Fraunhofer" (port:502 OR port:2455 OR port:1962) "industrial gateway"
+```
+
+### ZVEI (Electronics Infrastructure)
+```sh
+org:"ZVEI" port:102 "S7Comm" OR "SIMATIC"
+```
+
+### CEA / CNRS (France)
+```sh
+(hostname:cea.fr OR hostname:cnrs.fr) port:443 "smart energy"
+```
+
+---
+
+## 🌏 Asia (SCADA + IoT in Mega-Infrastructure)
+
+### CESI / CAS (China)
+```sh
+(hostname:cesi.cn OR hostname:cas.cn) (port:9600 OR port:2404) title:"RTU" OR "telemetry"
+```
+
+### IITs (India)
+```sh
+hostname:iit*.ac.in (port:2455 OR port:47808) "testbed" OR "sensor node"
+```
+
+### JEMA / JSME (Japan)
+```sh
+(hostname:jema-net.or.jp OR jsme.or.jp) port:44818 title:"robot arm" OR "PLC"
+```
+
+---
+
+## 🌍 Global Infrastructure & Smart City Technologies
+
+### Smart Cities (Smart Grids, Lighting, Traffic)
+```sh
+("smart city" OR "public lighting" OR "intelligent transport") (port:47808 OR port:80) title:"controller"
+```
+
+### Environmental Monitoring Nodes
+```sh
+("air quality" OR "weather station" OR "pollution sensor") port:443 OR port:8080
+```
+
+### Smart Agriculture
+```sh
+title:"greenhouse" OR "precision agriculture" port:502 OR port:9600 "soil sensor"
+```
+
+### Transportation + Vehicle Infrastructure
+```sh
+("V2X" OR "vehicle telematics") (port:5060 OR port:5006) title:"telemetry"
+```
+
+### Smart Energy (DER + BMS)
+```sh
+("DER" OR "battery" OR "inverter") (port:502 OR port:47808) title:"energy node"
+```
+
+### Healthcare IoT / MedTech
+```sh
+(title:"DICOM Server" OR "medical telemetry") (port:104 OR port:443) "device ID"
+```
+
+---
+
+## 🛡️ ICS + OT Cybersecurity Detection
+
+### Exposure of Industrial Intrusion Detection Systems
+```sh
+title:"IDS" OR "industrial firewall" OR "cyber-physical" port:443
+```
+
+### PLCs and SCADA panels with no authentication
+```sh
+(port:502 OR port:2455) -authentication title:"PLC Web Interface" OR "Control Panel"
+```
+
+### IoT Devices with Dangerous Defaults
+```sh
+"default password" OR "admin:admin" port:23,80,443 has_screenshot:true
+```
+
+---
