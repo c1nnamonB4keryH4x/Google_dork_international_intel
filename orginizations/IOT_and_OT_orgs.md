@@ -1,4 +1,3 @@
-Certainly! Here is an extensive list of significant OT organizations and sectors across various countries, categorized by their primary functions and industries:
 
 ### Global OT Organizations
 
