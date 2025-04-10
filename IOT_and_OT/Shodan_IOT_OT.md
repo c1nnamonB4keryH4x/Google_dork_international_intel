@@ -24,7 +24,7 @@ hostname:example.org
 city:"New York" port:22 org:"University"
 country:"US" port:23 "default password"
 geo:"48.8566,2.3522" port:80 title:"Login Page"
-org:"Tesla" port:443 "admin panel"
+org:"university" port:443 "admin panel"
 asn:AS15169 port:80 "Apache/2.4"
 ```
 
