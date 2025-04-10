@@ -13,7 +13,7 @@ How to Use This Guide
     Refer to the README: The README file provides an overview and guidelines for using the repository effectively.
 
 Dorking Techniques
-
+this website can be used for info gathering due to its web scraping capabilities, limit is 13.9999 layers: https://iceberg--abandonedmuse.on.websim.ai/
 Google dorking involves using advanced search operators to find specific information on the internet. Here are some common techniques:
 
     Basic Search Operators: Use quotes for exact matches, site: to limit searches to specific domains, and filetype: to find specific file types.
